@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UrlModule } from './modules/url/url.module';
+import { DatabaseModule } from './database/database.module';
 
 @Module({
   imports: [
@@ -11,6 +12,7 @@ import { UrlModule } from './modules/url/url.module';
       envFilePath: '.env',  
     }),
     UrlModule,
+    DatabaseModule
   ],
   controllers: [AppController],
   providers: [AppService],
